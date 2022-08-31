@@ -13,17 +13,6 @@ const app = express();
 
 app.use(express.json());
 
-const posts = [
-  {
-    username: "Ovesh",
-    title: "post 1",
-  },
-  {
-    username: "Mohammad",
-    title: "post 2",
-  },
-];
-
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
